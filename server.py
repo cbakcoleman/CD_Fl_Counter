@@ -7,7 +7,6 @@ def counter():
         session['visits'] = session.get('visits') + 1
     else: 
         session['visits'] = 1
-    return "{}".format(session.get('visits'))
 
 @app.route('/add')
 def add():
@@ -19,7 +18,7 @@ def view_counter():
     counter()
     return render_template("index.html", session=session)
 
-@app.route('/clear')
+@app.route('/destroy_session')
 def clear_counter():
     session.clear()
     return redirect('/')
