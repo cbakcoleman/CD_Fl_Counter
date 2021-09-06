@@ -9,8 +9,8 @@
 <body>
     <h1>Counter</h1>
     <h2>{{ session['visits'] }}</h2>
-    <form action=""></form>
-    <input type="submit" name="add" value="add">
-    <input type="submit" name="reset" value="reset">
+    <input type="button" value="Reload Page" onclick="window.location.reload();">
+    <a href="/add"><input type="submit"  name="add" value="Add"></a>
+    <a href="/clear"><input type="submit" name="reset" value="Reset"></a>
 </body>
 </html>
